@@ -1,0 +1,44 @@
+plugins {
+    id "com.android.application"
+    id 'com.google.gms.google-services'
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.travel_minds"
+    compileSdk = 34
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8  // Ensure compatibility with Kotlin
+    }
+
+    defaultConfig {
+        applicationId = "com.example.travel_minds"  // Ensure this matches your app's ID
+        minSdk = 30
+        targetSdk = flutter.targetSdkVersion
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug  // Update with your signing config if needed
+        }
+    }
+}
+
+flutter {
+    source = "../.."  // Make sure this points to the correct Flutter source path
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:2.1.0"  // Kotlin standard library
+    // Other dependencies...
+}
