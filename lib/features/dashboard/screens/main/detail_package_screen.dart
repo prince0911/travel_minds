@@ -11,7 +11,6 @@ import 'package:sizer/sizer.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
 import 'package:travel_minds/data/repositories/mongo_repository.dart';
 import 'package:travel_minds/features/dashboard/models/package_model.dart';
-import 'package:flutter_vibrate/flutter_vibrate.dart';
 import 'package:travel_minds/features/dashboard/models/wishlist_model.dart';
 import 'package:travel_minds/features/dashboard/screens/booking_screen.dart';
 
